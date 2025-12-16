@@ -1,4 +1,4 @@
-wandb
+wandb login
 
 e882ee0fe50547969c7b0db2595f954c3fc7f2c4
 

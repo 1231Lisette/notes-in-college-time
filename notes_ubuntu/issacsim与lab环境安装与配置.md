@@ -191,3 +191,11 @@ python scripts/tutorials/00_sim/create_empty.py
 点击左边栏的run 和debug
 
 随后配置launch.json文件
+
+---
+
+1. 利用leisaac的文档完成仿真与代码的入门
+2. 用xlerobot完成仿真学习
+3. 任务制定与训练
+4. 调试真机
+5. sim2real任务

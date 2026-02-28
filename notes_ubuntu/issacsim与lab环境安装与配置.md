@@ -194,8 +194,71 @@ python scripts/tutorials/00_sim/create_empty.py
 
 ---
 
+要不要用maniskill
+
 1. 利用leisaac的文档完成仿真与代码的入门
 2. 用xlerobot完成仿真学习
 3. 任务制定与训练
 4. 调试真机
 5. sim2real任务
+
+https://www.bilibili.com/video/BV1UxZ8YSEy4/
+
+---
+
+# leisaac学习记录
+
+1.  环境配置
+
+```bash
+conda create -n leisaac python=3.11
+conda activate leisaac
+
+# Install cuda-toolkit
+conda install -c "nvidia/label/cuda-12.8.1" cuda-toolkit
+
+# Install PyTorch (CUDA 12.8 wheels)
+pip install -U torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu128
+
+# Install LeIsaac and IsaacLab/IsaacSim extras
+pip install 'leisaac[isaaclab] @ git+https://github.com/LightwheelAI/leisaac.git#subdirectory=source/leisaac' --extra-index-url https://pypi.nvidia.com
+```
+
+以上是作为包安装，install as a package
+
+如果有问题就用源码安装，install from source
+
+2. 下载资产
+
+https://github.com/LightwheelAI/leisaac/releases/tag/v0.1.0
+
+```
+<assets>
+├── robots/
+│   └── so101_follower.usd
+└── scenes/
+    └── kitchen_with_orange/
+        ├── scene.usd
+        ├── assets
+        └── objects/
+            ├── Orange001
+            ├── Orange002
+            ├── Orange003
+            └── Plate
+```
+
+
+
+
+
+
+
+# 如何创建一个仿真
+
+1. App（应用程序）：首先，需要一个`SimulationApp`实例。这是整个仿真的入口和最高管理者，负责启动和关闭所有的底层服务
+2. Sim（仿真上下文）：需要一个`SimulationContext`。它定义了仿真的“物理规则”，比如时间步长`dt`和渲染频率
+3. World和Stage（世界与舞台）：`SimulationContext会自动创建一个World个Stage。你的任务是填充这个Stage，然后向其中添加图元（Prims）
+4. Prims（图元）：是构建场景的基本元素
+   - 环境元素：如地面（GroundPlane），灯光（DistantLight）
+   - 物体：如立方体（DynamicCuboid）、机器人（Articulation）。每个图元都需要在Stage上面有一个唯一的路径（prim_path），并可以设置其位置、颜色等属性
+

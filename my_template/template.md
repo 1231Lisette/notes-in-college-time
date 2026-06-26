@@ -4,9 +4,9 @@
 ---
 topic: 
 date: " {{date}} "
-course: 
 tags:
-  - studies
+  - #studies
+  - #notes
 ---
 
 # {{title}}
@@ -27,4 +27,4 @@ tags:
 
 
 ## 相关主题
-- [[]]
+- [[双向链接]]

@@ -28,7 +28,7 @@
               "type": "markdown",
               "state": {
                 "file": "未命名.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -215,10 +215,12 @@
   "active": "ac549ec226246e8e",
   "lastOpenFiles": [
     "双向链接.md",
+    "notes_ubuntu/xlerobot_import_issue.md",
+    "notes_ubuntu/前置知识.md",
     "未命名.md",
+    "未命名.base",
     "notes_ubuntu/3大il算法.md",
     "大杂烩/人工智能相关解释.md",
-    "未命名.base",
     "Excalidraw/Drawing 2026-06-26 18.34.59.excalidraw.md",
     "Excalidraw",
     "images/image1.png.md",

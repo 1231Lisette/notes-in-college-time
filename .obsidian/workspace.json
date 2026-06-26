@@ -96,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#studies",
+                "query": "[\"tags\"]",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -117,7 +117,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -217,14 +218,23 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "a4fa19f26423f2e6",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {},
+              "icon": "bot",
+              "title": "Claudian"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -237,10 +247,11 @@
       "bases:新建数据库": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
       "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "realclaudian:Open Claudian": false
     }
   },
-  "active": "272aeec750468115",
+  "active": "a4fa19f26423f2e6",
   "lastOpenFiles": [
     "2026-06-26.md",
     "未命名 1.md",
